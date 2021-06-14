@@ -76,7 +76,7 @@ function alphabetList(props: any) {
         style={{
           position: 'absolute',
           top: 12,
-          right: 12,
+          right: 9,
           color: '#AAA'
         }}
       >
@@ -86,10 +86,10 @@ function alphabetList(props: any) {
               <div
                 key={item}
                 style={{
-                  fontSize: 9.5,
+                  fontSize: 22,
                   verticalAlign: 'top',
                   cursor: 'pointer',
-                  color: '#AAA'
+                  color: '#000'
                 }}
                 onClick={() => { handleAlphaClick(item) }}
               >
