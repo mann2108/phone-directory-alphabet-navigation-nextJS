@@ -1,5 +1,32 @@
 import React, { useEffect, useState }  from "react";
 import AlphabetList from "../components/AlphabetList";
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+
+
+const useStyle = makeStyles((theme: Theme) =>
+  createStyles({
+    alphabetClass: {
+      width: "30%",
+      height: "100%",
+      padding: "4px",      
+    },
+    root: {
+      display: 'flex',
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+    small: {
+      width: theme.spacing(3),
+      height: theme.spacing(3),
+    },
+    large: {
+      width: theme.spacing(10),
+      height: theme.spacing(10),
+    },
+  }));
 
 function generateRandomName(): string {
   const charArr =
@@ -15,32 +42,37 @@ function generateRandomName(): string {
 }
 
 export default function Home() {
+  const classes = useStyle();
   const [data, setData] = useState<Array<string>>([]);
   useEffect(() => {
-    for (let i = 0; i < 1000; i++) {
+    console.log(classes);
+    for (let i = 0; i < 500; i++) {
       setData((previousData: string[]) => {
         previousData.push(generateRandomName());
         return previousData
       });
     }
-  }, []);
+  }, [])
   return (
-    <div>
+    <Grid className = {classes.root} spacing={3}>
+      <Grid item>
       <AlphabetList
-        className="alpha-list"
-        style={{
-          width: "550px",
-          height: "100%",
-          padding: "4px",
-          marginLeft: "10%"
-        }}
+        className = {classes.alphabetClass}
         generateFn={(item: any, index: any) => {
           return (
-            <div>{ item }</div>
+            <Grid container>
+              <Grid item justify="center" xs={3}>
+                <Avatar alt="Cindy Baker" className={classes.large} src="https://st3.depositphotos.com/15648834/17930/v/1600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" />
+              </Grid>
+              <Grid xs={9}>
+                {item}
+              </Grid>
+            </Grid>
           );
         }}
-        data={data}
+        data = {data}
       />
-    </div>
+      </Grid>
+    </Grid>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AlphabetItem from './AlphabetItem';
-
+import Grid from '@material-ui/core/Grid';
 const mapArrToMap = (arr: any) => {
   const map = new Map();
   var Regx = /^[A-Za-z]$/;
@@ -32,17 +32,18 @@ function alphabetList(props: any) {
     setScroller(scroller.scrollTop = mapPos.get(char));
   }
   const map = mapArrToMap(props.data);
-  const keyArr = Array.from(map.keys())
+  const keyArr = Array.from(map.keys());
   keyArr.sort();
   return (
-    <div
+    <Grid container
       className={props.className}
       style={{
         position: 'absolute',
         ...(props.style ? props.style : {})
       }}
     >
-      <div
+      <Grid
+        item
         style={{
           width: '100%',
           height: '100%',
@@ -70,9 +71,9 @@ function alphabetList(props: any) {
             }
           })
         }
-
-      </div>
-      <div
+      </Grid>
+      <Grid
+        item
         style={{
           position: 'absolute',
           top: 12,
@@ -98,9 +99,8 @@ function alphabetList(props: any) {
             )
           })
         }
-      </div>
-    </div>
-
+      </Grid>
+    </Grid>
   );
 }
 export default alphabetList;

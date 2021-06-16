@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 type AlphabetItemProps = {
   id: String;
   children: [];
@@ -16,23 +15,15 @@ function alphabetItem(props: AlphabetItemProps) {
     alphabetData.push(
       <div>
         {data.props.children}
-        <hr style={{ width: '50%', marginLeft: 0}}/>
+        <hr style={{ width: '90%', marginLeft: 0}}/>
       </div>)
   });
   return <div
-    style={{
-      textAlign: 'left',
-    }}
     ref={(ref: HTMLDivElement) => {
       fix = ref;
     }}
   >
-    <div
-      style={{
-        marginTop: 4,
-        marginBottom: 8,
-      }}
-    >
+    <div>
       {alphabetData}
     </div>
   </div>

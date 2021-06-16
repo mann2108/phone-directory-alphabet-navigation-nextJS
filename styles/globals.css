@@ -3,13 +3,10 @@
 }
 
 /* @import "~antd/dist/antd.css"; */
-.alpha-list {
-  width: 350px;
-  height: 400px;
-  padding-right: 4px;
-  padding-left: 4px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
-
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
