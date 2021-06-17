@@ -8,7 +8,7 @@ import Avatar from '@material-ui/core/Avatar';
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
     alphabetClass: {
-      width: "30%",
+      width: "100%",
       height: "100%",
       padding: "4px",      
     },
@@ -54,7 +54,7 @@ export default function Home() {
     }
   }, [])
   return (
-    <Grid className = {classes.root} spacing={3}>
+    <Grid className = {classes.root}>
       <Grid item>
       <AlphabetList
         className = {classes.alphabetClass}
