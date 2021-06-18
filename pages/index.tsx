@@ -60,11 +60,11 @@ function Home() {
         className = {classes.alphabetClass}
         generateFn={(item: any, index: any) => {
           return (
-            <Grid container>
+            <Grid container key={item}>
               <Grid item>
                 <Avatar alt="Cindy Baker" className={classes.large} src="https://st3.depositphotos.com/15648834/17930/v/1600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" />
               </Grid>
-              <Grid xs={9}>
+              <Grid item>
                 {item}
               </Grid>
             </Grid>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Grid from '@material-ui/core/Grid';
+
 type AlphabetItemProps = {
   id: String;
   children: [];
@@ -11,9 +13,9 @@ function alphabetItem(props: AlphabetItemProps) {
     props.registerPos(props.id, fix?.offsetTop)
   }, []);
   const alphabetData: any = [];
-  props.children.forEach((data: any) => {
+  props.children.forEach((data: any, index: any) => {
     alphabetData.push(
-      <div>
+      <div key={index}>
         {data.props.children}
         <hr style={{ width: '90%', marginLeft: 0}}/>
       </div>)
@@ -23,9 +25,7 @@ function alphabetItem(props: AlphabetItemProps) {
       fix = ref;
     }}
   >
-    <div>
-      {alphabetData}
-    </div>
+    {alphabetData} 
   </div>
 }
 export default alphabetItem;
