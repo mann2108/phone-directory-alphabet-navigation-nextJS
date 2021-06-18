@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import AlphabetItem from './AlphabetItem';
 import Grid from '@material-ui/core/Grid';
 const mapArrToMap = (arr: any) => {
@@ -25,12 +25,33 @@ const mapArrToMap = (arr: any) => {
 function alphabetList(props: any) {
   const [mapPos, setMapPos] = useState(new Map());
   const [scroller, setScroller] = useState<any>(null);
+  const [activeAlphabet, setActiveAlphabet] = useState<string>('');
+  let scrollerDiv = useRef<HTMLDivElement | null>(null)
   const registerPos = (id: any, top: any) => {
     setMapPos(mapPos.set(id, top));
   }
   const handleAlphaClick = (char: any) => {
-    setScroller(scroller.scrollTop = mapPos.get(char));
+    setScroller((prevState: any) => {
+      prevState.scrollTop = mapPos.get(char);
+      return prevState;
+    });
   }
+  useEffect(() => {
+    setScroller(scrollerDiv.current);
+    scrollerDiv?.current?.addEventListener('scroll', () => {
+      console.log(scrollerDiv.current?.scrollTop);
+      const alphaArray: Array<[string, number]> = [];
+      mapPos.forEach((value, key) => alphaArray.push([key, value]));
+      for (let i = 0; i < alphaArray.length; i++) {
+        if (scrollerDiv.current?.scrollTop && scrollerDiv.current?.scrollTop <= alphaArray[i][1]) {
+          setActiveAlphabet(alphaArray[i][0]);
+          console.log('Mann', alphaArray[i][0]);
+          break;
+        } 
+      }
+      console.log(activeAlphabet);
+    });
+  }, []);
   const map = mapArrToMap(props.data);
   const keyArr = Array.from(map.keys());
   keyArr.sort();
@@ -50,7 +71,7 @@ function alphabetList(props: any) {
           overflow: 'auto',
           paddingRight: 12,
         }}
-        ref={(ref) => { setScroller(ref) }}
+        ref={scrollerDiv}
       >
         {
           keyArr.map((char) => {

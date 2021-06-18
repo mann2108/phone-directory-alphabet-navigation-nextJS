@@ -45,23 +45,23 @@ export default function Home() {
   const classes = useStyle();
   const [data, setData] = useState<Array<string>>([]);
   useEffect(() => {
-    console.log(classes);
     for (let i = 0; i < 500; i++) {
       setData((previousData: string[]) => {
         previousData.push(generateRandomName());
         return previousData
       });
     }
-  }, [])
+  }, []);
   return (
-    <Grid className = {classes.root}>
+    <Grid className={classes.root}
+    >
       <Grid item>
       <AlphabetList
         className = {classes.alphabetClass}
         generateFn={(item: any, index: any) => {
           return (
             <Grid container>
-              <Grid item justify="center" xs={3}>
+              <Grid item>
                 <Avatar alt="Cindy Baker" className={classes.large} src="https://st3.depositphotos.com/15648834/17930/v/1600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" />
               </Grid>
               <Grid xs={9}>
