@@ -41,7 +41,7 @@ function generateRandomName(): string {
   return randomName;
 }
 
-export default function Home() {
+function Home() {
   const classes = useStyle();
   const [data, setData] = useState<Array<string>>([]);
   useEffect(() => {
@@ -76,3 +76,4 @@ export default function Home() {
     </Grid>
   )
 }
+export default Home;
