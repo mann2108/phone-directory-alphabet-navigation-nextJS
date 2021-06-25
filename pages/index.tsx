@@ -4,7 +4,6 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 
-
 const useStyle = makeStyles((theme: Theme) =>
   createStyles({
     alphabetClass: {

@@ -3,21 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next -p 8001",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
+    "cloudinary-react": "^1.7.0",
     "next": "10.2.3",
+    "node-sass": "^4.14.1",
     "react": "17.0.2",
     "react-alpha-jump": "^1.0.5",
     "react-alphabet-list": "^0.1.8",
+    "react-cropper": "^2.1.7",
     "react-dom": "17.0.2",
     "react-native-alphabetlistview": "^0.5.0"
   },
   "devDependencies": {
     "@types/react": "17.0.11",
+    "sass-loader": "^11.1.1",
     "typescript": "4.3.2"
   }
 }

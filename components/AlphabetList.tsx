@@ -118,7 +118,8 @@ function alphabetList(props: AlphabetListProps) {
           position: 'absolute',
           top: 12,
           right: 9,
-          color: '#AAA'
+          color: '#AAA',
+          height: '100%'
         }}
       >
         {
