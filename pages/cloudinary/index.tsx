@@ -37,12 +37,13 @@ const Demo = () => {
                   zoomOnTouch={true}
                   modal
                   zoomable={true}
-                  center
+                  center={false}
                   scalable={false}
                   cropBoxResizable={false}
                   dragMode="move"
                   background={false}
-                  responsive
+                responsive
+                cropBoxMovable={false}
                   checkOrientation={false}
                 />
                 <span className={"class-dashed my-h"}></span>
