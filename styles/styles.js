@@ -292,10 +292,12 @@ const useStyles = makeStyles((theme) => ({
 					backgroundColor: "transparent",
 				},
 				"& .cropper-crop-box, .cropper-view-box": {
+					zIndex: 1,
 					borderRadius: "50%",
 					boxShadow: "0 0 0 5px #fff !important",
 				},
 				"& .cropper-view-box": {
+					zIndex: 1,
 					boxShadow: "0 0 0 1px #39f",
 					outline: 0,
 				},
