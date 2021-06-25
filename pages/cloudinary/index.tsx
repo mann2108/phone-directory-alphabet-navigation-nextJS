@@ -52,17 +52,17 @@ const Demo = () => {
 									aspectRatio={1}
 									minCropBoxHeight={10}
 									minCropBoxWidth={10}
-									zoomOnWheel={false}
-									zoomOnTouch={false}
+									zoomOnWheel={true}
+									zoomOnTouch={true}
 									// zoomTo={zoomRange}
 									modal
-									zoomable
+									zoomable={true}
 									center
-									scalable={false}
+									scalable={true}
 									cropBoxResizable={false}
 									dragMode="move"
 									background={false}
-									// responsive
+									responsive
 									checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
 									// onInitialized={(instance) => {
 									// 	updateAvatarEditor(instance);

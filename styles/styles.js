@@ -302,6 +302,7 @@ const useStyles = makeStyles((theme) => ({
 					outline: 0,
 				},
 				"& .class-dashed": {
+					zIndex: 0,
 					border: "0 solid #eee",
 					display: "block",
 					opacity: "0.5",
