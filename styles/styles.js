@@ -292,23 +292,20 @@ const useStyles = makeStyles((theme) => ({
 					backgroundColor: "transparent",
 				},
 				"& .cropper-crop-box, .cropper-view-box": {
-					zIndex: 1,
 					borderRadius: "50%",
 					boxShadow: "0 0 0 5px #fff !important",
 				},
 				"& .cropper-view-box": {
-					zIndex: 1,
 					boxShadow: "0 0 0 1px #39f",
 					outline: 0,
 				},
 				"& .class-dashed": {
-					zIndex: 0,
 					border: "0 solid #fff",
 					display: "block",
-					// opacity: "0.5",
 					position: "absolute",
 				},
 				"& .my-h": {
+					pointerEvents: "none",
 					borderBottomWidth: "1px",
 					borderTopWidth: "1px",
 					height: "calc(100% / 6)",
@@ -317,6 +314,7 @@ const useStyles = makeStyles((theme) => ({
 					width: "100%",
 				},
 				"& .my-v": {
+					pointerEvents: "none",
 					borderLeftWidth: "1px",
 					borderRightWidth: "1px",
 					height: "100%",
