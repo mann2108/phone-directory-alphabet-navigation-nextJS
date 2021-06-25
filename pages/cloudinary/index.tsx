@@ -23,56 +23,30 @@ const Demo = () => {
 								xs={12}
 								container
 								className={"profile-photo-crop-section"}
-            >
-              <Cropper
-                // src="https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg"
-                // style={{ height: 400, width: "100%" }}
-                // // Cropper.js options
-                // guides={false}
-                // initialAspectRatio={1}
-                // crop={onCrop}
-                // ref={cropperRef}
-                // viewMode={1}
-                // minCropBoxHeight={300}
-                // zoomOnWheel={true}
-                // zoomOnTouch={true}
-                // checkOrientation={true}
-                // zoomable
-                // center
-                // scalable={true}
-                // cropBoxResizable={true}
-                // dragMode="move"
-                // background={false}
-
+              >
+                <Cropper
                   style={{ height: 448, width: "100%" }}
-									initialAspectRatio={1}
-									src={"https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg"}
-									viewMode={1}
-									guides={false}
-									aspectRatio={1}
-									minCropBoxHeight={10}
-									minCropBoxWidth={10}
-									zoomOnWheel={true}
-									zoomOnTouch={true}
-									// zoomTo={zoomRange}
-									modal
-									zoomable={true}
-									center
-									scalable={true}
-									cropBoxResizable={false}
-									dragMode="move"
-									background={false}
-									responsive
-									checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
-									// onInitialized={(instance) => {
-									// 	updateAvatarEditor(instance);
-									// }}
-									// ready={() => {
-									// 	updateCropperReadyBool(true);
-									// }}
-              />
-              <span className={"class-dashed my-h"}></span>
-              <span className={"class-dashed my-v"}></span>
+                  initialAspectRatio={1}
+                  src={"https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg"}
+                  viewMode={1}
+                  guides={false}
+                  aspectRatio={1}
+                  minCropBoxHeight={10}
+                  minCropBoxWidth={10}
+                  zoomOnWheel={true}
+                  zoomOnTouch={true}
+                  modal
+                  zoomable={true}
+                  center
+                  scalable={false}
+                  cropBoxResizable={false}
+                  dragMode="move"
+                  background={false}
+                  responsive
+                  checkOrientation={false}
+                />
+                <span className={"class-dashed my-h"}></span>
+                <span className={"class-dashed my-v"}></span>
             </Grid>
           </Grid>
         </Box>
