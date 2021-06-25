@@ -4,7 +4,7 @@ import "cropperjs/dist/cropper.css";
 import { useStyles } from '../../styles/styles';
 import { Box, Grid } from "@material-ui/core";
 const Demo = () => {
-  const classes = useStyles();
+  const classes: any = useStyles();
   const cropperRef = useRef<HTMLImageElement>(null);
   const onCrop = () => {
     const imageElement: any = cropperRef?.current;
