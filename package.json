@@ -12,12 +12,15 @@
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@types/react-swipeable-views": "^0.13.0",
     "cloudinary-react": "^1.7.0",
     "next": "10.2.3",
     "node-sass": "^4.14.1",
     "react": "17.0.2",
     "react-cropper": "^2.1.7",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-swipeable-bottom-sheet": "^1.1.2",
+    "react-swipeable-views": "^0.14.0"
   },
   "devDependencies": {
     "@types/react": "17.0.11",

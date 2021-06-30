@@ -901,6 +901,16 @@ const useStyles = makeStyles((theme) => ({
 	width100: {
 		width: "100% !important",
 	},
+	myclass: {
+		'& MuiDrawer-paper': {
+			top: '0',
+			left: '0',
+			right: '0',
+			bottom: 'auto',
+			height: '100%',
+			maxHeight: '100%',
+		}
+	},
 }));
 
 export { useStyles };
