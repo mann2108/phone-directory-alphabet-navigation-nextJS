@@ -53,7 +53,7 @@ export default function SimpleCollapse() {
           </div>
         {/* </Collapse> */}
       </div>
-      { !checked ? <FullWidthTabs /> : null }
+      <FullWidthTabs />
       </SwipeableViews>
     </div>
   );
