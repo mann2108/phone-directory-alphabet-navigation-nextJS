@@ -63,6 +63,7 @@ export default function FullWidthTabs() {
 
   return (
     <div className={classes.root}>
+      <div style={{ height: '80px', width: '100vw', backgroundColor: 'grey' }}>Header</div>
       <AppBar color="default" style={{position: 'relative'}}>
         <Tabs
           value={value}
@@ -82,6 +83,7 @@ export default function FullWidthTabs() {
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
         onChangeIndex={handleChangeIndex}
+        enableMouseEvents
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           Item One
