@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-react-plugin",
+      "config": {
+        "tsDocgen": "react-docgen-typescript"
+      }
+    }
+  ],
+  "projects": [
+    "60a3326d9fd94828171bf51c"
+  ],
+  "components": [
+    {
+      "path": ".next\\cache\\webpack\\client-development\\5.pack",
+      "zeplinIds": [
+        "60beb995c5060213d889c372"
+      ]
+    },
+    {
+      "path": ".next\\cache\\webpack\\client-development\\14.pack",
+      "zeplinIds": [
+        "60beb634ceac6718eef74d81"
+      ]
+    }
+  ],
+  "github": {
+    "repository": "mann2108/phone-directory-alphabet-navigation-nextJS"
+  }
+}
